@@ -271,6 +271,11 @@ export class DetailedServer {
         this.client.fetch(`/server/${this.id}/reset_all`, "POST");
     }
 
+    async getStatus() {
+        if (!this.client.auth) throw new Error("Not logged in.");
+        return this.client.fetch(`/server/${this.id}/status`, "GET");
+    }
+
     async repairFiles() {
         if (!this.client.auth) throw new Error("not logged in.");
         this.client.fetch(`/server/${this.id}/repair_files`, "POST");

@@ -24,9 +24,7 @@ export class Minehut {
         const settings = {
             method,
             headers: {
-                "User-Agent": `node-minehut-api/${
-                    require("../package.json").version
-                }`,
+                "User-Agent": `node-minehut-api/2.0.0`,
                 "Content-Type": "application/json", // headers can override
                 ...headers,
                 Authorization: this.auth?.token || "",
