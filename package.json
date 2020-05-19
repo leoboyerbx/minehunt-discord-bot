@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc",
+    "dev": "tsc -w",
+    "prod": "tsc && node ./build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0",
+    "typescript": "^3.9.2"
+  }
 }
