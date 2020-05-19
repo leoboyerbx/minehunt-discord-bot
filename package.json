@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typeit/discord": "^4.0.2",
     "@types/dotenv": "^8.2.0",
     "@types/node-fetch": "^2.5.7",
+    "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.0",
