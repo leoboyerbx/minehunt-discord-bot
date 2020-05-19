@@ -273,7 +273,7 @@ export class DetailedServer {
 
     async getStatus() {
         if (!this.client.auth) throw new Error("Not logged in.");
-        return this.client.fetch(`/server/${this.id}/status`, "GET");
+        return this.client.fetch(`/server/${this.id}/status`, "GET").then(res => res.status);
     }
 
     async repairFiles() {

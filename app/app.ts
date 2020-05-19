@@ -1,11 +1,11 @@
 import { Minehut } from "./lib/minehut-api";
-import dotenv from 'dotenv'
+import * as dotenv from "dotenv";
+dotenv.config();
 
 (async () => {
-    console.log(process.env.EMAIL)
     const minehut = new Minehut()
-    await minehut.login('lboyer1@live.fr', 'Pee@gu0311')
-    const myserver = await minehut.servers.fetchOneByName('leoetzozo')
-    const res = await myserver.getStatus()
-    console.log(res)
+    await minehut.login(process.env.EMAIL|| '', process.env.PASSWORD || '')
+    const myserver = await minehut.servers.fetchOne('5ec2e2c5b3db9e00734d9243')
+    const status = await myserver.getStatus()
+    console.log(status)
 })();
